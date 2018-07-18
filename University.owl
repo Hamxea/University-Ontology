@@ -1,0 +1,1169 @@
+@prefix : <http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University> .
+
+<http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University> rdf:type owl:Ontology ;
+                                                                          owl:versionInfo "Version 5.2.0"^^xsd:string ;
+                                                                          :creator "Hamza Haruna Mohammed"^^xsd:string ;
+                                                                          :description "The University Ontology is the an educational ontology in the domain of education. It aims to standardize the structure of the uniersity setting annotation, data integrationa and supports the cmputer-asssisted reasoning."^^xsd:string ;
+                                                                          :dc.title "University Ontology"^^xsd:string ;
+                                                                          :default.Language "en."^^xsd:string ;
+                                                                          :dc.subject "Genaral University Ontology Structure."^^xsd:string ;
+                                                                          :dc.date "15.20.2017"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#advisor
+:advisor rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#creator
+:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#dc.date
+:dc.date rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#dc.subject
+:dc.subject rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#dc.title
+:dc.title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#default.Language
+:default.Language rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#description
+:description rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#emailAddress
+:emailAddress rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#has_Relation
+:has_Relation rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#publicationAuthor
+:publicationAuthor rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#publicationDate
+:publicationDate rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt
+rdf:Alt rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag
+rdf:Bag rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#acceptReceipt
+:acceptReceipt rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :FinancialOffice ;
+               rdfs:range :Student .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#appicationForInternationalStudents
+:appicationForInternationalStudents rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                    rdfs:domain :InternationalOffice ;
+                                    rdfs:range :Student .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#borrowBook
+:borrowBook rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Student ,
+                        :TeachingStaff ;
+            rdfs:range :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#dealsWithErasmus
+:dealsWithErasmus rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :InternationalOffice ;
+                  rdfs:range :UndergraduateStudent .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#giveCheck
+:giveCheck rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :FinancialOffice ;
+           rdfs:range :Staff .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#giveStudentCertificate
+:giveStudentCertificate rdf:type owl:ObjectProperty ;
+                        rdfs:domain :StudentAffairs ;
+                        rdfs:range :Student .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#handlesBills
+:handlesBills rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :FinancialOffice ;
+              rdfs:range :Staff .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#handlesLegalActivities
+:handlesLegalActivities rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :LegalOffice ;
+                        rdfs:range :Person .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#organizeTournament
+:organizeTournament rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :SportsAndCulture ;
+                    rdfs:range :Student .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#registerStudent
+:registerStudent rdf:type owl:ObjectProperty ;
+                 rdfs:domain :StudentAffairs ;
+                 rdfs:range :Student .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#research
+:research rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :TeachingStaff ;
+          rdfs:range :Research .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#studies
+:studies rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Student ;
+         rdfs:range :Course .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#teaches
+:teaches rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :TeachingStaff ;
+         rdfs:range :Course .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#ISBN
+:ISBN rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Library ;
+      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#article_topic_name
+:article_topic_name rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :GraduateStudent ,
+                                :TeachingStaff ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#bookName
+:bookName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Library ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#first_name
+:first_name rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Person ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#last_name
+:last_name rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Person ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#periodical_topic_name
+:periodical_topic_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :GraduateStudent ,
+                                   :TeachingStaff ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#staffID
+:staffID rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Staff ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#studentID
+:studentID rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Student ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#thesis_topic_name
+:thesis_topic_name rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :GraduateStudent ,
+                               :TeachingStaff ;
+                   rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Article
+:Article rdf:type owl:Class ;
+         rdfs:subClassOf :Research ;
+         :publicationAuthor "" ;
+         :publicationDate "" ;
+         rdfs:comment "A piece of writing included with others in a newspaper, magazine, or other publication."^^xsd:string ;
+         rdfs:label "Article"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Assistant
+:Assistant rdf:type owl:Class ;
+           rdfs:subClassOf :TeachingStaff ;
+           rdfs:comment "Assistants ( which includes both teaching and Research positions)" .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#AssistantProfessor
+:AssistantProfessor rdf:type owl:Class ;
+                    rdfs:subClassOf :Professor .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#AssociateProfessor
+:AssociateProfessor rdf:type owl:Class ;
+                    rdfs:subClassOf :Professor .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CENG
+:CENG rdf:type owl:Class ;
+      rdfs:subClassOf :GradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CengCourse
+:CengCourse rdf:type owl:Class ;
+            rdfs:subClassOf :UnderGradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Course
+:Course rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EEE
+:EEE rdf:type owl:Class ;
+     rdfs:subClassOf :GradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EeeCourse
+:EeeCourse rdf:type owl:Class ;
+           rdfs:subClassOf :UnderGradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EngCourse
+:EngCourse rdf:type owl:Class ;
+           rdfs:subClassOf :UnderGradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EngineeringBook
+:EngineeringBook rdf:type owl:Class ;
+                 rdfs:subClassOf :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#FinancialOffice
+:FinancialOffice rdf:type owl:Class ;
+                 rdfs:subClassOf :Non_TeachingStaff ;
+                 rdfs:comment "The part of the University that manages its money. The business functions of a finance department typically include planning, organizing, auditing, accounting for and controlling its company's finances."^^xsd:string ;
+                 rdfs:label "Finance Office"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#FullProfessor
+:FullProfessor rdf:type owl:Class ;
+               rdfs:subClassOf :Professor .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#GradCourse
+:GradCourse rdf:type owl:Class ;
+            rdfs:subClassOf :Course .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#GraduateStudent
+:GraduateStudent rdf:type owl:Class ;
+                 rdfs:subClassOf :Student ;
+                 rdfs:comment "Gradute student class, which includes Masters and Phd students" .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#IND
+:IND rdf:type owl:Class ;
+     rdfs:subClassOf :GradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#IndCourse
+:IndCourse rdf:type owl:Class ;
+           rdfs:subClassOf :UnderGradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#InternationalOffice
+:InternationalOffice rdf:type owl:Class ;
+                     rdfs:subClassOf :Non_TeachingStaff ;
+                     rdfs:comment """*  To promote and support international exchange and education.
+To provide the student with experiences that foster global perspectives, cross-cultural competence, and appreciation for diversity.
+*  To support University's international students, scholars, and education abroad participants with services that enhance the quality of their intercultural experience and contribute to their academic success.
+* To facilitate University's participation in global scholarship and international educational exchange
+*  To inspire an appreciation of differences among cultures by providing opportunities for all segments of the campus community to participate in international education and intercultural exchange.
+ *  To provide outreach and advising which enables increasing numbers of students, representing all academic majors and the full diversity of our campus, to enrich their studies with education abroad.
+ *  To meet the special needs of international students, faculty, and researchers, integrating them into campus life, so as to maximize reciprocal benefits from their participation in the community.
+ *  To facilitate re-entry of education abroad returnees, ensuring personal reintegration and maximum sharing of their international education experiences with the community.
+ *  To support growth and development of University's International House, in order to increase on campus intercultural exchange and understanding between international and Citizens students and scholars, including both residents and non-residents."""^^xsd:string ;
+                     rdfs:label "International Office"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Lecturer
+:Lecturer rdf:type owl:Class ;
+          rdfs:subClassOf :TeachingStaff .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#LegalOffice
+:LegalOffice rdf:type owl:Class ;
+             rdfs:subClassOf :Non_TeachingStaff ;
+             rdfs:comment """The University Legal Office is responsible for the provision of all legal services to University, directed to ensuring the University meets its strategic imperatives.  The Legal Office provides assurance that the way the University proposes to act is legally defensible, within the scope of the University's powers, and that all legal risks are appropriately identified and managed.
+
+The University Legal Office provides its services to the University through the Executive, Administrative and Academic units.  It does not provide personal legal services to members of staff or students."""^^xsd:string ;
+             rdfs:label "Legal Office"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Librarian
+:Librarian rdf:type owl:Class ;
+           rdfs:subClassOf :Non_TeachingStaff ;
+           rdfs:comment "a person who works professionally in a library, providing access to information and sometimes social or technical programming. In addition, librarians provide instruction on information literacy. (wikipedia)"^^xsd:string ;
+           rdfs:label "Librarian"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Library
+:Library rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Magazine
+:Magazine rdf:type owl:Class ;
+          rdfs:subClassOf :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#ManagementBook
+:ManagementBook rdf:type owl:Class ;
+                rdfs:subClassOf :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Manuscripts
+:Manuscripts rdf:type owl:Class ;
+             rdfs:subClassOf :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#MathCourse
+:MathCourse rdf:type owl:Class ;
+            rdfs:subClassOf :UnderGradCourse .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#MathsBook
+:MathsBook rdf:type owl:Class ;
+           rdfs:subClassOf :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Newspaper
+:Newspaper rdf:type owl:Class ;
+           rdfs:subClassOf :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Non_TeachingStaff
+:Non_TeachingStaff rdf:type owl:Class ;
+                   rdfs:subClassOf :Staff .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Periodical
+:Periodical rdf:type owl:Class ;
+            rdfs:subClassOf :Research ;
+            :publicationAuthor "" ;
+            :publicationDate ""^^xsd:dateTime ;
+            rdfs:comment "a magazine or newspaper published at regular intervals."^^xsd:string ;
+            rdfs:label "Periodical"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Periodicals
+:Periodicals rdf:type owl:Class ;
+             rdfs:subClassOf :Library .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ;
+        :emailAddress xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#PostDoc
+:PostDoc rdf:type owl:Class ;
+         rdfs:subClassOf :TeachingStaff .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Professor
+:Professor rdf:type owl:Class ;
+           rdfs:subClassOf :TeachingStaff .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Research
+:Research rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          :publicationAuthor :GraduateStudent ,
+                             :TeachingStaff ;
+          :publicationDate :TeachingStaff ;
+          rdfs:comment "systematic investigation into and study of materials and sources in order to establish facts and reach new conclusion."^^xsd:string ;
+          rdfs:label "Research"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#ResearchAssistant
+:ResearchAssistant rdf:type owl:Class ;
+                   rdfs:subClassOf :Assistant ;
+                   rdfs:comment "Assistant that helps in research activities" .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#SportsAndCulture
+:SportsAndCulture rdf:type owl:Class ;
+                  rdfs:subClassOf :Non_TeachingStaff ;
+                  rdfs:label "Sports and Culture"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Staff
+:Staff rdf:type owl:Class ;
+       rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Student
+:Student rdf:type owl:Class ;
+         rdfs:subClassOf :Person ;
+         :advisor :TeachingStaff .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#StudentAffairs
+:StudentAffairs rdf:type owl:Class ;
+                rdfs:subClassOf :Non_TeachingStaff ;
+                rdfs:label "Student Affairs"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#TeachingAssistant
+:TeachingAssistant rdf:type owl:Class ;
+                   rdfs:subClassOf :Assistant ;
+                   rdfs:comment "Assistant that helps in teaching activities mostly" .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#TeachingStaff
+:TeachingStaff rdf:type owl:Class ;
+               rdfs:subClassOf :Staff ;
+               :has_Relation :Course .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Thesis
+:Thesis rdf:type owl:Class ;
+        rdfs:subClassOf :Research ;
+        :publicationAuthor "" ;
+        :publicationDate "" ;
+        rdfs:comment "a long essay or dissertation involving personal research, written by a candidate for a university degree"^^xsd:string ;
+        rdfs:label "Thesis"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#UnderGradCourse
+:UnderGradCourse rdf:type owl:Class ;
+                 rdfs:subClassOf :Course .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#UndergraduateStudent
+:UndergraduateStudent rdf:type owl:Class ;
+                      rdfs:subClassOf :Student ;
+                      rdfs:comment "Students pursuing udergraduate studies." .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#VisitingProfessor
+:VisitingProfessor rdf:type owl:Class ;
+                   rdfs:subClassOf :Professor .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CD/DVD
+<http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CD/DVD> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf :Library .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Assist.Prof1
+:Assist.Prof1 rdf:type owl:NamedIndividual ,
+                       :AssistantProfessor ;
+              :research :research3 ;
+              :teaches :IND392 ;
+              :first_name "A.Nurdan"^^xsd:string ;
+              :last_name "SARAN"^^xsd:string ;
+              :staffID 75645 ;
+              rdfs:label "Assist. Prof. Dr. A.Nurdan SARAN"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Assist.Prof3
+:Assist.Prof3 rdf:type owl:NamedIndividual ,
+                       :FullProfessor ;
+              :borrowBook :book2 ,
+                          :book5 ;
+              :research :research3 ,
+                        :research4 ;
+              :teaches :CENG501 ,
+                       :CENG651 ,
+                       :CS109 ,
+                       :IND392 ,
+                       :MAT215 ;
+              :first_name "Erdoğan" ;
+              :last_name "Doğdu"^^xsd:string ;
+              :staffID 65432645 ;
+              rdfs:comment "The Chair of Computer Engineering"^^xsd:string ;
+              rdfs:label "Prof.Dr. Erdoğan DOĞDU" .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Assoc.Prof
+:Assoc.Prof rdf:type owl:NamedIndividual ,
+                     :AssociateProfessor ;
+            :borrowBook :book1 ,
+                        :book5 ;
+            :research :EEE548 ,
+                      :research4 ;
+            :teaches :CENG501 ,
+                     :ENG106 ,
+                     :ENG108 ;
+            :first_name "Hadi"^^xsd:string ;
+            :last_name "Hakan MARAŞ"^^xsd:string ;
+            :staffID 94378584 ;
+            rdfs:label "Assoc. Prof. Dr. Hadi Hakan MARAŞ"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Assoc.Prof1
+:Assoc.Prof1 rdf:type owl:NamedIndividual ,
+                      :AssociateProfessor ;
+             :first_name "Reza"^^xsd:string ;
+             :last_name "ZARE HASSANPOUR"^^xsd:string ;
+             :staffID 765432 ;
+             rdfs:label "Assoc. Prof Reza ZARE HASSANPOUR"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CENG501
+:CENG501 rdf:type owl:NamedIndividual ,
+                  :CENG ;
+         rdfs:comment "Gamification"^^xsd:string ;
+         rdfs:label "ceng501"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CENG511
+:CENG511 rdf:type owl:NamedIndividual ,
+                  :CENG ;
+         rdfs:comment "Advance algorithms"^^xsd:string ;
+         rdfs:label "ceng511"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CENG651
+:CENG651 rdf:type owl:NamedIndividual ,
+                  :CENG ;
+         rdfs:comment "Semantic Web"^^xsd:string ;
+         rdfs:label "ceng651"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CS101
+:CS101 rdf:type owl:NamedIndividual ,
+                :CengCourse ;
+       rdfs:comment "Introduction to Computer science"^^xsd:string ;
+       rdfs:label "cs101"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CS109
+:CS109 rdf:type owl:NamedIndividual ,
+                :CengCourse ;
+       rdfs:comment "Introduction to Programming (C language)"^^xsd:string ;
+       rdfs:label "cs109"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EEE103
+:EEE103 rdf:type owl:NamedIndividual ,
+                 :EeeCourse ;
+        rdfs:comment "Introduction to Electrical Engineering"^^xsd:string ;
+        rdfs:label "eee103"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EEE110
+:EEE110 rdf:type owl:NamedIndividual ,
+                 :EeeCourse ;
+        rdfs:comment "Logic deign"^^xsd:string ;
+        rdfs:label "eee110"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EEE305
+:EEE305 rdf:type owl:NamedIndividual ,
+                 :EeeCourse ;
+        rdfs:comment "Microprocessor"^^xsd:string ;
+        rdfs:label "eee305"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EEE548
+:EEE548 rdf:type owl:NamedIndividual ,
+                 :EEE ;
+        rdfs:comment "Signals and Processing"^^xsd:string ;
+        rdfs:label "eee548"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#EEE673
+:EEE673 rdf:type owl:NamedIndividual ,
+                 :EEE ;
+        rdfs:comment "Digital processing"^^xsd:string ;
+        rdfs:label "eee673"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#ENG106
+:ENG106 rdf:type owl:NamedIndividual ,
+                 :EngCourse ;
+        rdfs:comment "English Writing skills"^^xsd:string ;
+        rdfs:label "eng106"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#ENG108
+:ENG108 rdf:type owl:NamedIndividual ,
+                 :EngCourse ;
+        rdfs:label "eng108"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#FinOffice1
+:FinOffice1 rdf:type owl:NamedIndividual ,
+                     :FinancialOffice ;
+            :acceptReceipt :Student3 ,
+                           :Student4 ,
+                           :Student6 ;
+            :giveCheck :Lecturer2 ;
+            :first_name "Mehmet"^^xsd:string ;
+            :last_name "Güzel"^^xsd:string ;
+            :staffID 987654 ;
+            rdfs:label "financialOffice 1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#FinOffice2
+:FinOffice2 rdf:type owl:NamedIndividual ,
+                     :FinancialOffice ;
+            :acceptReceipt :Student6 ,
+                           :student7 ;
+            :giveCheck :Assist.Prof1 ,
+                       :Assist.Prof3 ,
+                       :Assoc.Prof1 ;
+            :first_name "Hamza Haruna"^^xsd:string ;
+            :last_name "Mohammed"^^xsd:string ;
+            :staffID 65432 ;
+            rdfs:label "financialOffice 2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#IND102
+:IND102 rdf:type owl:NamedIndividual ,
+                 :IndCourse ;
+        rdfs:label "ind102"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#IND263
+:IND263 rdf:type owl:NamedIndividual ,
+                 :IndCourse ;
+        rdfs:label "ind263"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#IND392
+:IND392 rdf:type owl:NamedIndividual ,
+                 :IndCourse ;
+        rdfs:label "ind392"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#IND503
+:IND503 rdf:type owl:NamedIndividual ,
+                 :IND ;
+        rdfs:label "ind203"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#IND629
+:IND629 rdf:type owl:NamedIndividual ,
+                 :IND ;
+        rdfs:label "ind629"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#InernationalOffice1
+:InernationalOffice1 rdf:type owl:NamedIndividual ,
+                              :InternationalOffice ;
+                     :dealsWithErasmus :Student1 ;
+                     :first_name "badamasi"^^xsd:string ;
+                     :last_name "babaji"^^xsd:string ;
+                     :staffID 8435473 ;
+                     rdfs:label "internationalOffice 1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#InernationalOffice2
+:InernationalOffice2 rdf:type owl:NamedIndividual ,
+                              :InternationalOffice ;
+                     :appicationForInternationalStudents :Student4 ;
+                     :first_name "faruk"^^xsd:string ;
+                     :last_name "abdulhamid"^^xsd:string ;
+                     :staffID 882642 ;
+                     rdfs:label "internationalOffice 2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#InernationalOffice3
+:InernationalOffice3 rdf:type owl:NamedIndividual ,
+                              :InternationalOffice ;
+                     :dealsWithErasmus :Student2 ,
+                                       :Student3 ;
+                     :first_name "kabir"^^xsd:string ;
+                     :last_name "dauda"^^xsd:string ;
+                     :staffID 362672 ;
+                     rdfs:label "internationalOffice 3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Lecturer1
+:Lecturer1 rdf:type owl:NamedIndividual ,
+                    :Lecturer ;
+           :research :research3 ;
+           :teaches :CS101 ;
+           :first_name "Hamza"^^xsd:string ;
+           :last_name "Mohammed"^^xsd:string ;
+           :staffID 201701 ;
+           rdfs:label "Roya CHOUPANI"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Lecturer2
+:Lecturer2 rdf:type owl:NamedIndividual ,
+                    :Lecturer ;
+           :research :research4 ;
+           :teaches :CS101 ,
+                    :EEE110 ,
+                    :ENG106 ,
+                    :ENG108 ;
+           :first_name "Farid Serdar"^^xsd:string ;
+           :last_name "TAŞEL"^^xsd:string ;
+           :staffID 6754321 ;
+           rdfs:label "Farid Serdar TAŞEL"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#LegOffice1
+:LegOffice1 rdf:type owl:NamedIndividual ,
+                     :LegalOffice ;
+            :handlesLegalActivities :Assist.Prof3 ,
+                                    :FinOffice2 ,
+                                    :StuAffairs2 ;
+            :first_name "Mert"^^xsd:string ;
+            :last_name "Yazici"^^xsd:string ;
+            :staffID 6544351 ;
+            rdfs:label "legalOffice 1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#LegOffice2
+:LegOffice2 rdf:type owl:NamedIndividual ,
+                     :LegalOffice ;
+            :handlesLegalActivities :Assoc.Prof ,
+                                    :Librarian2 ;
+            :first_name "Mohammed"^^xsd:string ;
+            :last_name "Ali"^^xsd:string ;
+            :staffID "87654"^^xsd:int ;
+            rdfs:label "legalOffice 2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Librarian1
+:Librarian1 rdf:type owl:NamedIndividual ,
+                     :Librarian ;
+            :first_name "njkfdabhfd"^^xsd:string ;
+            :last_name "gsrfgrw"^^xsd:string ;
+            :staffID 635432 ;
+            rdfs:label "librarian 1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Librarian2
+:Librarian2 rdf:type owl:NamedIndividual ,
+                     :Librarian ;
+            :first_name "hgaeg"^^xsd:string ;
+            :last_name "grtqe"^^xsd:string ;
+            :staffID 765432 ;
+            rdfs:label "librarian 2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#MAT101
+:MAT101 rdf:type owl:NamedIndividual ,
+                 :MathCourse ;
+        rdfs:label "mat101"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#MAT118
+:MAT118 rdf:type owl:NamedIndividual ,
+                 :MathCourse ;
+        rdfs:label "mat118"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#MAT215
+:MAT215 rdf:type owl:NamedIndividual ,
+                 :MathCourse ;
+        rdfs:label "mat215"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Prof1
+:Prof1 rdf:type owl:NamedIndividual ,
+                :FullProfessor ;
+       :research :research3 ;
+       :teaches :IND392 ;
+       :first_name "Müslim"^^xsd:string ;
+       :last_name "BOZYİĞİT"^^xsd:string ;
+       :staffID 689765 ;
+       rdfs:label "Prof. Dr. Müslim BOZYİĞİT"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Prof2
+:Prof2 rdf:type owl:NamedIndividual ,
+                :AssistantProfessor ;
+       :borrowBook :book4 ;
+       :teaches :EEE673 ;
+       :first_name "Engin"^^xsd:string ;
+       :last_name "DEMİR"^^xsd:string ;
+       :staffID 7546753423 ;
+       rdfs:label "Assist. Prof. Dr. Engin DEMİR"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Prof3
+:Prof3 rdf:type owl:NamedIndividual ,
+                :PostDoc ;
+       :borrowBook :book3 ;
+       :research :research4 ;
+       :teaches :MAT118 ,
+                :MAT215 ;
+       :first_name "Hussain"^^xsd:string ;
+       :last_name "Alaqad"^^xsd:string ;
+       :staffID 653432 ;
+       rdfs:label "Dr. Hussain alqad"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#StuAffairs1
+:StuAffairs1 rdf:type owl:NamedIndividual ,
+                      :StudentAffairs ;
+             :first_name "ljökhgfd"^^xsd:string ;
+             :last_name "kyujthrgefdw"^^xsd:string ;
+             :staffID 862298 ;
+             rdfs:label "studentAffairs 1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#StuAffairs2
+:StuAffairs2 rdf:type owl:NamedIndividual ,
+                      :StudentAffairs ;
+             :first_name "uıkdyu"^^xsd:token ;
+             :last_name "kjhgfds"^^xsd:string ;
+             :staffID 103859 ;
+             rdfs:label "studentAffairs 2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#StuAffairs3
+:StuAffairs3 rdf:type owl:NamedIndividual ,
+                      :StudentAffairs ;
+             :first_name "2643747"^^xsd:string ,
+                         "nbvcxz"^^xsd:string ;
+             :last_name "kjhgfds"^^xsd:string ;
+             rdfs:label "studentAffairs 3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Student1
+:Student1 rdf:type owl:NamedIndividual ,
+                   :UndergraduateStudent ;
+          :borrowBook :book4 ,
+                      :book5 ;
+          :studies :CS101 ,
+                   :EEE103 ,
+                   :ENG106 ;
+          :first_name "John"^^xsd:string ;
+          :last_name "Snow"^^xsd:string ;
+          :studentID 7654321 ;
+          rdfs:label "student 1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Student2
+:Student2 rdf:type owl:NamedIndividual ,
+                   :UndergraduateStudent ;
+          :studies :CS101 ,
+                   :CS109 ;
+          :first_name "Aya"^^xsd:string ;
+          :last_name "JKndşkj"^^xsd:string ;
+          :studentID 56432 ;
+          rdfs:label "student 2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Student3
+:Student3 rdf:type owl:NamedIndividual ,
+                   :UndergraduateStudent ;
+          :studies :CS101 ,
+                   :CS109 ;
+          :first_name "ghff"^^xsd:string ;
+          :last_name "sfgf"^^xsd:string ;
+          :studentID 65432243 ;
+          rdfs:label "student 3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Student4
+:Student4 rdf:type owl:NamedIndividual ,
+                   :UndergraduateStudent ;
+          :studies :CS101 ;
+          :first_name "Emre"^^xsd:string ;
+          :last_name "Can"^^xsd:string ;
+          rdfs:label "student 4"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Student5
+:Student5 rdf:type owl:NamedIndividual ,
+                   :UndergraduateStudent ;
+          :studies :CS101 ,
+                   :CS109 ;
+          :first_name "jhyshdy"^^xsd:string ;
+          :last_name "ghjhs"^^xsd:string ;
+          :studentID 33775566 ;
+          rdfs:label "student 5"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Student6
+:Student6 rdf:type owl:NamedIndividual ,
+                   :GraduateStudent ;
+          :research :research2 ;
+          :studies :CENG501 ,
+                   :CENG651 ;
+          :first_name "Hamza H"^^xsd:string ;
+          :last_name "Mohammed"^^xsd:string ;
+          :studentID 98458344 ;
+          rdfs:label "student 6"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#Vist.Prof
+:Vist.Prof rdf:type owl:NamedIndividual ,
+                    :VisitingProfessor ;
+           :teaches :IND629 ,
+                    :MAT215 ;
+           :first_name "Fahad"^^xsd:string ;
+           :last_name "jarad"^^xsd:string ;
+           :staffID 7843864394 ;
+           rdfs:label "visitingProfessor"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#book1
+:book1 rdf:type owl:NamedIndividual ,
+                :MathsBook ;
+       :ISBN 78361256 ;
+       :bookName "Thomas Calculus"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#book2
+:book2 rdf:type owl:NamedIndividual ,
+                :Newspaper ;
+       :ISBN 736357635 ;
+       :bookName "daily Trust newspaper"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#book3
+:book3 rdf:type owl:NamedIndividual ,
+                :EngineeringBook ;
+       :ISBN 56376 ;
+       :bookName "Semantic Web"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#book4
+:book4 rdf:type owl:NamedIndividual ,
+                :ManagementBook ;
+       :ISBN 8736635 ;
+       :bookName "Techniques in Airport Management"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#book5
+:book5 rdf:type owl:NamedIndividual ,
+                :Periodicals ;
+       :ISBN 53476653 ;
+       :bookName "big data"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#book6
+:book6 rdf:type owl:NamedIndividual ,
+                :EngineeringBook ;
+       :ISBN 8746384536 ;
+       :bookName "Fundamental of Electric Engineering"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#book7
+:book7 rdf:type owl:NamedIndividual ,
+                :Magazine ;
+       :bookName "Political science in general"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#research1
+:research1 rdf:type owl:NamedIndividual ,
+                    :Thesis ;
+           :thesis_topic_name "Semantic web services"^^xsd:string ;
+           rdfs:comment "Semantic web services"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#research2
+:research2 rdf:type owl:NamedIndividual ,
+                    :Periodical ;
+           :periodical_topic_name "E-Government,	 eHealth, e-?"^^xsd:string .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :research2 ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget :Periodical ;
+   :publicationAuthor "fm fkdkbkds" ;
+   :publicationDate "10.02.2001"^^xsd:string
+ ] .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#research3
+:research3 rdf:type owl:NamedIndividual ,
+                    :Article ;
+           :article_topic_name "Structured data on semantic web, triple stores, ..."^^xsd:string ;
+           rdfs:comment "Structured data on semantic web, triple stores, ..."^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#research4
+:research4 rdf:type owl:NamedIndividual ,
+                    :Thesis ;
+           :thesis_topic_name "Efficient processing of linked data"^^xsd:string ;
+           rdfs:comment "Efficient processing of linked data"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#research5
+:research5 rdf:type owl:NamedIndividual ,
+                    :Article ;
+           :article_topic_name "Distributed query processing and reasoning on big linked data"^^xsd:string ;
+           rdfs:comment "Distributed query processing and reasoning on big linked data"^^xsd:string .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#sportsAndCulture
+:sportsAndCulture rdf:type owl:NamedIndividual ,
+                           :SportsAndCulture ;
+                  :organizeTournament :Student3 ;
+                  :first_name "Ali"^^xsd:string ;
+                  :last_name "Mohammed"^^xsd:string ;
+                  :staffID 8776543 .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#sportsAndCulture2
+:sportsAndCulture2 rdf:type owl:NamedIndividual ,
+                            :SportsAndCulture ;
+                   :organizeTournament :Student4 ,
+                                       :Student5 ;
+                   :first_name "Mohammed"^^xsd:string ;
+                   :last_name "Saeed mohammed"^^xsd:string ;
+                   :staffID 7653423 .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#sportsAndCulture3
+:sportsAndCulture3 rdf:type owl:NamedIndividual ,
+                            :SportsAndCulture ;
+                   :organizeTournament :Student3 ,
+                                       :student7 ;
+                   :first_name "abdulhameed"^^xsd:string ;
+                   :last_name "faisal"^^xsd:string ;
+                   :staffID 6764534 .
+
+
+###  http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#student7
+:student7 rdf:type owl:NamedIndividual ,
+                   :GraduateStudent ,
+                   :ResearchAssistant ,
+                   :TeachingAssistant ;
+          :research :research4 ;
+          :studies :CENG651 ,
+                   :EEE673 ;
+          :teaches :CENG501 ;
+          :first_name "Mehmet"^^xsd:string ;
+          :last_name "Ozcağolu"^^xsd:string ;
+          :studentID 645321 ;
+          rdfs:label "student 7"^^xsd:string .
+
+
+[ rdf:type :ResearchAssistant ,
+           :TeachingAssistant
+] .
+
+[ rdf:type :EngineeringBook ,
+            :Magazine ,
+            :ManagementBook ,
+            :Manuscripts ,
+            :MathsBook ,
+            :Newspaper ,
+            :Periodicals ,
+            <http://www.semanticweb.org/hamza.mohammed/ontologies/2017/9/University#CD/DVD>
+ ] .
+
+[ rdf:type :GraduateStudent ,
+            :TeachingStaff
+ ] .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( :Article
+                 :Non_TeachingStaff
+                 :Periodical
+                 :Thesis
+               )
+ ] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Article
+                :Periodical
+                :Thesis
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AssistantProfessor
+                :AssociateProfessor
+                :FullProfessor
+                :VisitingProfessor
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :GradCourse
+                :Non_TeachingStaff
+                :UnderGradCourse
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
